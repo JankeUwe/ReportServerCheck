@@ -1,0 +1,14 @@
+# Visual Studio
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.sln.docstates
+.DS_Store
+
+# Report Server cache
+*.rdl.data
+
+# Local configuration
+*.local

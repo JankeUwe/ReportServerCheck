@@ -29,7 +29,7 @@
     <OutputPath>bin\Release</OutputPath>
     <ErrorLevel>2</ErrorLevel>
     <OverwriteDatasets>False</OverwriteDatasets>
-    <OverwriteDataSources>False</OverwriteDataSources>
+    <OverwriteDataSources>True</OverwriteDataSources>
     <TargetServerVersion>SSRS2016</TargetServerVersion>
     <Platform>Win32</Platform>
     <TargetReportFolder>ReportServerCheck</TargetReportFolder>
@@ -48,15 +48,21 @@
   <ItemGroup>
     <Report Include="Report Server Usage and Statistics.rdl" />
     <Report Include="ReportConfiguration.rdl" />
+    <Report Include="ReportDataSourceHealth.rdl" />
+    <Report Include="ReportDataSourceStatus.rdl" />
     <Report Include="ReportErrors.rdl" />
     <Report Include="ReportExecution.rdl" />
+    <Report Include="ReportExecutionTrend.rdl" />
     <Report Include="ReportInactiveReports .rdl" />
     <Report Include="ReportInventory.rdl" />
     <Report Include="ReportPermission.rdl" />
     <Report Include="ReportQueries.rdl" />
     <Report Include="ReportReportsOnline.rdl" />
+    <Report Include="ReportSharedDatasets.rdl" />
     <Report Include="ReportStatistics.rdl" />
     <Report Include="ReportSubscription.rdl" />
+    <Report Include="ReportSubscriptionRecipients.rdl" />
+    <Report Include="ReportTimingAnalysis.rdl" />
     <Report Include="ReportTOP20Reports.rdl" />
     <Report Include="ReportTOP50User.rdl" />
     <Report Include="ReportUserAccessCount.rdl" />

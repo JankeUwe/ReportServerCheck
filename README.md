@@ -6,7 +6,7 @@ A comprehensive suite of RDL-based diagnostic and monitoring reports for SQL Ser
 
 ## Overview
 
-This project contains 15+ production-ready reports that provide deep insights into SSRS/PBIRS health, performance, and configuration:
+This project contains **20 production-ready reports** (15 original + 5 new in v1.1) that provide deep insights into SSRS/PBIRS health, performance, and configuration:
 
 ### Report Categories
 
@@ -16,6 +16,50 @@ This project contains 15+ production-ready reports that provide deep insights in
 - **User Access & Permissions**: User access patterns, role assignments, subscription tracking
 - **Caching & Snapshots**: Cache management, snapshot configuration and status
 - **Server Inventory**: Complete catalog of all reports, folders, and subscriptions
+
+---
+
+## 🆕 NEW in v1.1 (2026-06-14): 5 Advanced Diagnostic Reports
+
+### 1. **ReportExecutionTrend.rdl**
+12-month execution performance analysis with trend tracking.
+- Execution count by report & month
+- Average data retrieval, processing, rendering times
+- Error count with visual highlighting
+- **Use:** Performance optimization, SLA tracking
+
+### 2. **ReportSubscriptionRecipients.rdl**
+Recipient-centric subscription overview — who gets what reports?
+- Email recipients, associated reports, delivery formats
+- Last execution time & delivery status
+- **Use:** Subscription audits, delivery validation
+
+### 3. **ReportDataSourceStatus.rdl**
+Complete datasource inventory: shared vs. embedded mapping.
+- Report-to-datasource relationships
+- Extension types (SQL, OLEDB, etc.)
+- **Use:** Consolidation planning, datasource optimization
+
+### 4. **ReportSharedDatasets.rdl**
+Shared dataset usage across reports (new discovery feature!).
+- Which reports consume which shared datasets
+- Dataset creation & modification dates
+- **Technical:** Uses `Catalog.Type = 8` filter + `DataSets.LinkID` join
+- **Use:** Dataset ROI analysis, impact assessment
+
+### 5. **ReportCacheSnapshots.rdl**
+Reports with cache (ExecutionFlag = 2) or snapshot execution (ExecutionFlag = 1).
+- Execution mode classification per report
+- Cache/snapshot age tracking
+- **Use:** Cache strategy optimization, storage planning
+
+**All new reports feature:**
+- ✅ Dark enterprise theme with gradient headers
+- ✅ READ UNCOMMITTED isolation for ExecutionLog performance
+- ✅ www.powershelldba.de footer branding
+- ✅ Responsive layout for print & web export
+
+---
 
 ## Features
 
@@ -105,6 +149,20 @@ For issues, questions, or feature requests: [Open an Issue](https://github.com/J
 
 ---
 
-**Version**: 1.0  
-**Last Updated**: 2026-06-13  
+**Version**: 1.1  
+**Last Updated**: 2026-06-14  
 **Compatible with**: SSRS 2016+ / PBIRS
+
+---
+
+## Changelog
+
+### v1.1 – 2026-06-14
+- ✅ Added 5 new diagnostic reports (ReportExecutionTrend, ReportSubscriptionRecipients, ReportDataSourceStatus, ReportSharedDatasets, ReportCacheSnapshots)
+- ✅ Dark theme styling with footer branding
+- ✅ Optimized queries with READ UNCOMMITTED isolation
+- ✅ Updated documentation
+
+### v1.0 – 2026-06-13
+- Initial release with 15 diagnostic reports
+
